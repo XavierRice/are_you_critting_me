@@ -23,6 +23,7 @@ function Party() {
                         role={member.role}
                         name={member.name}
                         detail={member.detail}
+                        image={member.image}
                     />
                 ))}
             </div>
