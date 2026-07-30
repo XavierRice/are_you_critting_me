@@ -1,4 +1,12 @@
 export const party = [
+ {
+  actor: 'Scott Johnson',
+  role: 'Dungeon Master & Architect of Chaos',
+  name: 'Dungeon Master',
+  detail: 
+    'Scott our Game Master and DM bringing its heroes, villains, monsters and catastrophes to life while keeping the story moving and the consequences coming.',
+  },
+
   {
     actor: 'David Carl',
     role: 'Former Captain & Questionable Wizard',
