@@ -1,3 +1,5 @@
+import listenArtwork from '../assets/AYCM_HERO.png'
+
 function Listen() {
   function preventPlaceholderLink(event) {
     event.preventDefault()
@@ -6,6 +8,13 @@ function Listen() {
   return (
     <section className="listen section" id="listen">
       <p className="section-kicker">Join the adventure</p>
+
+      <img
+        className="listen-artwork"
+        src={listenArtwork}
+        alt="Are You Critting Me podcast artwork"
+      />
+
       <h2>Roll initiative. Press play.</h2>
 
       <p>
