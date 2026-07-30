@@ -1,8 +1,20 @@
+import partyEmblem from '../assets/Mainimage.png'
+
+
 function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-glow" />
 
+ <img
+    className="hero-emblem"
+    src={partyEmblem}
+    alt=""
+    aria-hidden="true"
+/>
+
+
+<div className='hero-content'>
       <div className="eyebrow">A D&amp;D Catastrophe</div>
 
       <h1>
@@ -27,6 +39,7 @@ function Hero() {
       </div>
 
       <p className="domain">areyoucrittingme.com</p>
+      </div>
     </section>
   )
 }
