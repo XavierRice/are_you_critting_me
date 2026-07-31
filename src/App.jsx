@@ -5,7 +5,7 @@ import Story from './components/Story'
 import Party from './components/Party'
 import Listen from './components/Listen'
 import Footer from './components/Footer'
-
+import VideoSection from './components/VideoSection'
 
 function App() {
   return (
