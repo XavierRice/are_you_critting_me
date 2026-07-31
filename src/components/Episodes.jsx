@@ -10,7 +10,7 @@ function Episodes() {
           <h2>Latest misadventures</h2>
         </div>
 
-        <p>To Replace with episodes titles and links.</p>
+      
       </div>
 
       <div className="episode-grid">
