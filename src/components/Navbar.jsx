@@ -1,11 +1,12 @@
 import logo from '../assets/AYCM_LOGO.png'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
     <header className="navbar">
-      <a
+      <Link
         className="brand"
-        href="#home"
+        to="/"
         aria-label="Are You Critting Me home"
       >
         <img
@@ -16,13 +17,14 @@ function Navbar() {
         />
 
         <span>ARE YOU CRITTING ME!?</span>
-      </a>
+      </Link>
 
       <nav aria-label="Main navigation">
-        <a href="#story">The Story</a>
-        <a href="#episodes">Episodes</a>
-        <a href="#party">The Party</a>
-        <a href="#listen">Listen</a>
+        <a href="/#story">The Story</a>
+        <a href="/#episodes">Episodes</a>
+        <a href="/#party">The Party</a>
+        <a href="/#listen">Listen</a>
+        <Link to="/watch-and-support">Watch</Link>
       </nav>
     </header>
   )
