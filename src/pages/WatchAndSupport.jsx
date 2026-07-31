@@ -1,11 +1,11 @@
 import VideoSection from "../components/VideoSection";
-// to import SalesSection
+import SignupSection from "../components/SignupSection";
 
 function WatchAndSupport() {
   return (
     <main>
       <VideoSection />
-      {/* <SalesSection /> */}
+      <SignupSection/>
     </main>
   )
 }
