@@ -1,4 +1,4 @@
-import partyEmblem from '../assets/Mainimage.png'
+import partyEmblem from '../assets/MainImage.png'
 
 
 function Hero() {

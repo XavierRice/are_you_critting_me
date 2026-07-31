@@ -2,7 +2,7 @@ import artieImage from '../assets/party/Artie_falcon.png'
 import shrimpImage from '../assets/party/Shrimp_katie.png'
 import friggImage from '../assets/party/Frig_Sarah.png'
 import garyImage from '../assets/party/Gary_Xavier.png'
-import dmImage from '../assets/party/DM_scoot.png'
+import dmImage from '../assets/party/DM_Scoot.png'
 
 
 export const party = [
