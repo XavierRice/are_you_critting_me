@@ -3,7 +3,7 @@ function VideoSection()
   return (
     <section className="video-section" id="watch">
       <div className="section-heading">
-        <p className="section-kicker">Enter Calderon</p>
+        {/* <p className="section-kicker">Enter Calderon</p> */}
         <h2>Watch and Bear Witness</h2>
 
         <p>
