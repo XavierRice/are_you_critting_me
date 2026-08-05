@@ -1,5 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseSecretKey = process.env.SUPABASE_SECRET_KEY;
+
 const allowedContactTypes = new Set(["general", "booking", "partnership", "sponsorship", "press", "technical"]);
 
 function jsonResponse(body, status = 200) {
@@ -51,7 +54,9 @@ export default async function handler(request) {
   const userAgent = request.headers.get("user-agent") || null;
   const referrer = request.headers.get("referer") || null;
 
-  const { error } = await supabase.from("contacts").insert({
+  const { error } = await supabase
+  .from("contacts")
+  .insert({
     name,
     email,
     subject: subject || null,
