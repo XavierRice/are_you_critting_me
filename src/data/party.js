@@ -5,6 +5,17 @@ import garyImage from '../assets/party/Gary_Xavier.png'
 import dmImage from '../assets/party/DM_Scoot.png'
 
 
+import davidPhoto from '../assets/party/David_fake.png'
+import katiePhoto from '../assets/party/Katie_fake.png'
+import sarahPhoto from '../assets/party/Sarah_fake.png'
+import xavierPhoto from '../assets/party/Xavier_fake.png'
+import scottPhoto from '../assets/party/Scott_fake.png'
+
+
+
+
+
+
 export const party = [
  {
   actor: 'Scott Johnson',
@@ -12,7 +23,8 @@ export const party = [
   name: 'Dungeon Master',
   detail: 
     'Scott our Game Master and DM bringing its heroes, villains, monsters and catastrophes to life while keeping the story moving and the consequences coming.',
-  image: dmImage
+  image: dmImage,
+  actorImage: scottPhoto,
   },
 
   {
@@ -21,15 +33,17 @@ export const party = [
     name: 'Art Deco Falcon',
     detail:
       'An aarakocra sailor and former captain of The Salty Mermaid. Artie has crossed dangerous seas, studied the magical arts, and become moderately competent at both.',
-      image: artieImage
-  },
+      image: artieImage,
+      actorImage:davidPhoto,
+      },
   {
     actor: 'Katie Hartman',
     role: 'Wandering Bard & Cult Favorite',
     name: 'Shrimp Reznoir',
     detail:
       'A banjoulele-playing halfling who left home after a family dispute and began busking across Calderon. Best known for the divisive hit “Clowns Gotta Clown.”',
-    image:shrimpImage
+    image:shrimpImage,
+    actorImage:katiePhoto,
   },
   {
     actor: 'Sarah Nowak',
@@ -37,7 +51,8 @@ export const party = [
     name: 'Frigg',
     detail:
       'A powerful centaur cast out after learning that her mother traded Frigg’s fate for eternal beauty. She found a new family among a band of misfits for hire.',
-    image:friggImage
+    image:friggImage,
+    actorImage:sarahPhoto,
   },
   {
     actor: 'Xavier Rice',
@@ -45,6 +60,7 @@ export const party = [
     name: 'Gary OnyxElm',
     detail:
       'Gary version 6.9 was created for grieving nobles and programmed to “Protect and Obey.” Passed from ruler to ruler, his system now reboots and he his own master for the first time.',
-    image:garyImage
+    image:garyImage,
+    actorImage:xavierPhoto,
   },
 ]

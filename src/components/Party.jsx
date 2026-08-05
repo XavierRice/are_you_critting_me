@@ -24,6 +24,7 @@ function Party() {
                         name={member.name}
                         detail={member.detail}
                         image={member.image}
+                        actorImage={member.actorImage}
                     />
                 ))}
             </div>
