@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import WatchAndSupport from './pages/WatchAndSupport' 
-
+import Contact from './pages/Contact'
 
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
             path="/watch-and-support"
             element={<WatchAndSupport />}
           />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
 
         <Footer />

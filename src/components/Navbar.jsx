@@ -60,6 +60,8 @@ function Navbar() {
           <Link to="/watch-and-support" onClick={closeMenu}>
             Watch
           </Link>
+
+          <Link to="/contact">Contact</Link>
         </nav>
       </div>
     </header>
