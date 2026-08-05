@@ -1,26 +1,17 @@
 import partyEmblem from '../assets/MainImage.png'
-
+import logo from '../assets/AYCM_LOGO.png'
 
 function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-glow" />
 
- <img
-    className="hero-emblem"
-    src={partyEmblem}
-    alt=""
-    aria-hidden="true"
-/>
-
-
 <div className='hero-content'>
-      <div className="eyebrow">A D&amp;D Catastrophe</div>
-
-      <h1>
-        Are You
-        <span>Critting Me!?</span>
-      </h1>
+       <img
+      className="hero-logo"
+      src={logo}
+      alt="Are You Critting Me!?"
+       />
 
       <p className="hero-copy">
         Four actors, storytellers and comedians enter the Second Age of
