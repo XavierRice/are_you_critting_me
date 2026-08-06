@@ -21,4 +21,10 @@ export const episodes = [
     description:
       'the gang comes upon a mining village with dead bodies littered on the frozen ground. A few survivors tell them of the man in black who hypnotized them. Delving into the mines Frigg mind meets a thirst trap. ',
   },
+  {
+  season: "1",
+  number: '4',
+  title: "TBD",
+  description: "TBD",
+  }
 ]
