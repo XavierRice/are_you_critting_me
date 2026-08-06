@@ -973,6 +973,30 @@ footer {
       visibility 180ms ease;
   }
 
+.signup-status {
+  min-height: 1.4rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.signup-status--success {
+  color: #b8f5c8;
+}
+
+.signup-status--error {
+  color: #ffb6b6;
+}
+
+.signup-form button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+
+
+
   .nav-links.is-open {
     opacity: 1;
     visibility: visible;
