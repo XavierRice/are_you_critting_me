@@ -1,48 +1,70 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
-import logo from '../assets/AYCM_LOGO.png'
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import {
+  Menu,
+  X,
+  Play,
+  Mail,
+} from "lucide-react";
+
+import logo from "../assets/AYCM_LOGO.png";
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeMenu = () => setMenuOpen(false)
+  function closeMenu() {
+    setMenuOpen(false);
+  }
 
   return (
     <header className="navbar">
-      <div className="navbar-inner">
+      <div className="navbar-shell">
         <Link
-          className="brand"
+          className="navbar-brand"
           to="/"
           aria-label="Are You Critting Me home"
           onClick={closeMenu}
         >
           <img
-            className="brand-logo"
             src={logo}
             alt=""
             aria-hidden="true"
           />
 
-          <span>ARE YOU CRITTING ME!?</span>
+          <span className="navbar-brand-copy">
+            <strong>Are You Critting Me!?</strong>
+            <small>A D&amp;D Catastrophe</small>
+          </span>
         </Link>
 
         <button
           className="nav-toggle"
           type="button"
-          aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
+          aria-label={
+            menuOpen
+              ? "Close navigation"
+              : "Open navigation"
+          }
           aria-expanded={menuOpen}
+          aria-controls="main-navigation"
           onClick={() => setMenuOpen((current) => !current)}
         >
-          {menuOpen ? <X size={26} /> : <Menu size={26} />}
+          {menuOpen ? (
+            <X size={24} aria-hidden="true" />
+          ) : (
+            <Menu size={24} aria-hidden="true" />
+          )}
         </button>
 
         <nav
-          className={`nav-links ${menuOpen ? 'is-open' : ''}`}
+          id="main-navigation"
+          className={`nav-links ${
+            menuOpen ? "is-open" : ""
+          }`}
           aria-label="Main navigation"
         >
           <a href="/#story" onClick={closeMenu}>
-            The Story
+            Story
           </a>
 
           <a href="/#episodes" onClick={closeMenu}>
@@ -50,22 +72,30 @@ function Navbar() {
           </a>
 
           <a href="/#party" onClick={closeMenu}>
-            The Party
+            Party
           </a>
 
-          <a href="/#listen" onClick={closeMenu}>
-            Listen
-          </a>
-
-          <Link to="/watch-and-support" onClick={closeMenu}>
+          <Link
+            className="nav-feature-link"
+            to="/watch-and-support"
+            onClick={closeMenu}
+          >
+            <Play size={15} aria-hidden="true" />
             Watch
           </Link>
 
-          <Link to="/contact">Contact</Link>
+          <Link
+            className="nav-contact-link"
+            to="/contact"
+            onClick={closeMenu}
+          >
+            <Mail size={15} aria-hidden="true" />
+            Contact
+          </Link>
         </nav>
       </div>
     </header>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
