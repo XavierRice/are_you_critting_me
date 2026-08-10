@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import WatchAndSupport from './pages/WatchAndSupport' 
 import Contact from './pages/Contact'
-
+import Apothecary from './pages/Apothecary'
 
 function App() {
   return (
@@ -22,7 +22,13 @@ function App() {
             path="/watch-and-support"
             element={<WatchAndSupport />}
           />
-          <Route path="/contact" element={<Contact />} />
+          <Route 
+          path="/contact" 
+          element={<Contact />} />
+          <Route 
+          path="/apothecary" 
+          element={<Apothecary />} />
+
         </Routes>
 
         <Footer />

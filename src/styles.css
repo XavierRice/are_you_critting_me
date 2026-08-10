@@ -1343,3 +1343,374 @@ footer {
   
   .contact-hero h1{margin:.6rem 0 1rem;color:var(--gold);font-family:"Cinzel",serif;font-size:clamp(2.75rem,8vw,5.5rem);line-height:.95}.contact-hero>p:last-child{max-width:680px;margin:0 auto;color:#e8ddf1;font-size:1.05rem;line-height:1.75}
   .contact-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,5vw,4rem);width:min(1080px,100%);margin:0 auto;padding:clamp(1.5rem,5vw,3rem);border:1px solid rgba(255,213,74,.28);border-radius:28px;background:linear-gradient(135deg,rgba(41,19,61,.94),rgba(15,10,24,.97));box-shadow:0 30px 80px rgba(0,0,0,.5)}.contact-copy h2{margin:1rem 0;color:#fff1b8;font-size:clamp(2rem,4vw,3.5rem);line-height:1}.contact-copy>p{color:#d7cbe0;line-height:1.75}.contact-icon{display:grid;width:3rem;height:3rem;place-items:center;border:1px solid rgba(255,213,74,.35);border-radius:50%;color:var(--gold);background:rgba(255,213,74,.08)}.contact-callout{display:flex;align-items:center;gap:.6rem;margin-top:1.5rem;color:#d8c4eb;font-size:.9rem}.contact-form{display:grid;gap:1rem}.contact-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.contact-form label{display:grid;gap:.45rem;color:#f6ecff;font-size:.78rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.contact-form input,.contact-form select,.contact-form textarea{width:100%;box-sizing:border-box;padding:.9rem 1rem;border:1px solid rgba(220,195,255,.25);border-radius:12px;color:#fff;background:rgba(255,255,255,.055);font:inherit;letter-spacing:normal;text-transform:none}.contact-form textarea{resize:vertical}.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:2px solid rgba(255,213,74,.75);outline-offset:2px;border-color:transparent}.contact-consent{grid-template-columns:auto 1fr;align-items:start;gap:.75rem!important;color:#d7cbe0!important;font-size:.82rem!important;font-weight:500!important;line-height:1.5;letter-spacing:normal!important;text-transform:none!important}.contact-consent input{width:1rem;height:1rem;margin-top:.15rem;accent-color:var(--gold)}.contact-form button{display:inline-flex;justify-content:center;align-items:center;gap:.6rem;padding:1rem 1.25rem;border:0;border-radius:12px;color:#241006;background:linear-gradient(180deg,#fff0a0,#f4ad24);font:inherit;font-weight:900;cursor:pointer}.contact-form button:disabled{cursor:wait;opacity:.65}.contact-status{min-height:1.5rem;color:#cdbfd6;font-size:.9rem;text-align:center}.contact-status--success{color:#b8f5c8}.contact-status--error{color:#ffb6b6}.hidden-field{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}@media(max-width:800px){.contact-layout,.contact-form-grid{grid-template-columns:1fr}.contact-page{padding-top:6.5rem}}
+
+  
+/* ========================================
+   CALDERON APOTHECARY
+======================================== */
+
+.apothecary-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(113, 54, 148, 0.28),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 85% 60%,
+      rgba(177, 67, 46, 0.1),
+      transparent 35%
+    ),
+    #08060d;
+}
+
+.apothecary-hero {
+  position: relative;
+  overflow: hidden;
+
+  padding: 8rem 1.5rem 6rem;
+
+  text-align: center;
+}
+
+.apothecary-glow {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  background: rgba(138, 72, 181, 0.18);
+  filter: blur(110px);
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+}
+
+.apothecary-emblem {
+  position: relative;
+
+  display: grid;
+  width: 78px;
+  height: 78px;
+
+  place-items: center;
+
+  margin: 1.5rem auto;
+
+  border: 1px solid rgba(255, 213, 74, 0.36);
+  border-radius: 50%;
+
+  color: var(--gold);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 213, 74, 0.12),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  box-shadow:
+    0 0 45px rgba(255, 213, 74, 0.1);
+}
+
+.apothecary-hero h1 {
+  position: relative;
+
+  max-width: 900px;
+  margin: 0 auto;
+
+  color: #fff7df;
+
+  font-family: "Cinzel", serif;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.95;
+}
+
+.apothecary-hero h1 span {
+  display: block;
+  color: var(--gold);
+}
+
+.apothecary-intro {
+  position: relative;
+
+  max-width: 680px;
+  margin: 1.75rem auto 0;
+
+  color: var(--muted);
+
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.apothecary-category-strip {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+
+  max-width: 900px;
+  margin: 2.5rem auto 0;
+}
+
+.apothecary-category-strip span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  padding: 0.55rem 0.85rem;
+
+  border: 1px solid rgba(255, 213, 74, 0.2);
+  border-radius: 999px;
+
+  color: #e5d7ed;
+  background: rgba(255, 255, 255, 0.035);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.apothecary-section {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 7rem;
+}
+
+.apothecary-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: 2rem;
+  align-items: end;
+
+  margin-bottom: 2.5rem;
+}
+
+.apothecary-heading h2 {
+  margin: 0.35rem 0 0;
+
+  color: #fff7df;
+
+  font-family: "Cinzel", serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.apothecary-heading > p {
+  max-width: 480px;
+  margin: 0;
+
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.apothecary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+.apothecary-product {
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 213, 74, 0.16);
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(48, 25, 61, 0.78),
+      rgba(15, 10, 22, 0.96)
+    );
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3);
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.apothecary-product:hover {
+  border-color: rgba(255, 213, 74, 0.42);
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 26px 70px rgba(0, 0, 0, 0.42);
+}
+
+.apothecary-product-image {
+  position: relative;
+
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(139, 83, 173, 0.22),
+      transparent 65%
+    ),
+    #120c19;
+}
+
+.apothecary-product-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.product-placeholder {
+  display: grid;
+  width: 100%;
+  height: 100%;
+
+  place-items: center;
+  align-content: center;
+  gap: 0.75rem;
+
+  color: rgba(255, 213, 74, 0.55);
+
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.product-badge {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+
+  padding: 0.4rem 0.65rem;
+
+  border: 1px solid rgba(255, 213, 74, 0.4);
+  border-radius: 999px;
+
+  color: #2a1203;
+  background: var(--gold);
+
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.apothecary-product-content {
+  padding: 1.4rem;
+}
+
+.product-category {
+  margin: 0 0 0.65rem;
+
+  color: var(--gold);
+
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.apothecary-product h3 {
+  margin: 0;
+
+  color: #fff7df;
+
+  font-family: "Cinzel", serif;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.product-description {
+  min-height: 5.2rem;
+  margin: 0.85rem 0 0;
+
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.product-price {
+  color: #fff1b8;
+
+  font-family: "Cinzel", serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.product-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  padding: 0.7rem 0.85rem;
+
+  border: 1px solid rgba(255, 213, 74, 0.25);
+  border-radius: 10px;
+
+  color: #2b1405;
+  background: var(--gold);
+
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.product-button:disabled {
+  color: #cdbed4;
+  background: rgba(255, 255, 255, 0.06);
+
+  cursor: default;
+  opacity: 0.75;
+}
+
+@media (max-width: 900px) {
+  .apothecary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .apothecary-heading {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .apothecary-hero {
+    padding-top: 6.5rem;
+  }
+
+  .apothecary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .apothecary-category-strip {
+    justify-content: flex-start;
+  }
+}

@@ -84,6 +84,8 @@ function Navbar() {
             Watch
           </Link>
 
+          <Link to="/apothecary">Apothecary</Link>
+
           <Link
             className="nav-contact-link"
             to="/contact"
