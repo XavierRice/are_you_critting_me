@@ -21,7 +21,7 @@ function Hero() {
 
       <div className="hero-actions">
         <a className="button primary" href="#listen">
-          Roll for listening
+          Comming Soon!
         </a>
 
         <a className="button secondary" href="#story">
