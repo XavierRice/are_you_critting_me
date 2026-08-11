@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import MobileCTA from './components/MobileCTA'
 import Home from './pages/Home'
 import WatchAndSupport from './pages/WatchAndSupport' 
 import Contact from './pages/Contact'
@@ -32,6 +33,8 @@ function App() {
         </Routes>
 
         <Footer />
+        <MobileCTA/>
+        
       </div>
      
     

@@ -87,13 +87,22 @@ function Navbar() {
           <Link to="/apothecary">Apothecary</Link>
 
           <Link
-            className="nav-contact-link"
             to="/contact"
             onClick={closeMenu}
           >
-            <Mail size={15} aria-hidden="true" />
             Contact
           </Link>
+          
+          <Link
+            className="nav-join-link"
+            to="/watch-and-support#updates"
+            onClick={closeMenu}
+            >
+
+            <Mail size={15} aria-hidden="true" />
+            Join the Party
+          </Link>
+
         </nav>
       </div>
     </header>
