@@ -2190,3 +2190,146 @@ h2 {
     padding-bottom: 5.25rem;
   }
 }
+
+
+/* ========================================
+   CUSTOM 404
+======================================== */
+
+.not-found-page {
+  position: relative;
+  display: grid;
+  min-height: 75vh;
+  place-items: center;
+
+  padding: 7rem 1.5rem 6rem;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(111, 29, 69, 0.34),
+      transparent 32rem
+    ),
+    #0b0710;
+}
+
+.not-found-glow {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+
+  width: 430px;
+  height: 430px;
+
+  border-radius: 50%;
+
+  background: rgba(137, 73, 181, 0.16);
+  filter: blur(100px);
+
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.not-found-card {
+  position: relative;
+
+  width: min(760px, 100%);
+  padding: clamp(2rem, 6vw, 4.5rem);
+
+  border: 1px solid rgba(244, 189, 88, 0.25);
+  border-radius: 28px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(45, 21, 59, 0.92),
+      rgba(14, 9, 20, 0.97)
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.not-found-icon {
+  display: grid;
+  width: 64px;
+  height: 64px;
+
+  place-items: center;
+
+  margin: 1.25rem auto;
+
+  border: 1px solid rgba(244, 189, 88, 0.3);
+  border-radius: 50%;
+
+  color: var(--gold);
+  background: rgba(244, 189, 88, 0.07);
+}
+
+.not-found-card h1 {
+  max-width: 650px;
+  margin: 0 auto;
+
+  color: #fff1b8;
+
+  font-family: "Cinzel", serif;
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  line-height: 0.98;
+}
+
+.not-found-copy {
+  max-width: 570px;
+  margin: 1.5rem auto 0;
+
+  color: var(--muted);
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+
+  margin-top: 2rem;
+}
+
+.not-found-actions .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.not-found-joke {
+  margin: 2rem 0 0;
+
+  color: #9d8fa4;
+
+  font-size: 0.78rem;
+  font-style: italic;
+}
+
+@media (max-width: 560px) {
+  .not-found-page {
+    min-height: 70vh;
+    padding: 5.5rem 1rem 4rem;
+  }
+
+  .not-found-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .not-found-actions {
+    display: grid;
+  }
+
+  .not-found-actions .button {
+    justify-content: center;
+  }
+}

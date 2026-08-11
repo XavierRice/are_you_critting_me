@@ -1,45 +1,51 @@
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import MobileCTA from './components/MobileCTA'
 import Home from './pages/Home'
-import WatchAndSupport from './pages/WatchAndSupport' 
+import WatchAndSupport from './pages/WatchAndSupport'
 import Contact from './pages/Contact'
 import Apothecary from './pages/Apothecary'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
     <BrowserRouter>
-     <div className="site-shell">
+      <div className="site-shell">
         <Navbar />
 
         <Routes>
           <Route
-          path="/" 
-          element={<Home />} />
+            path="/"
+            element={<Home />}
+          />
+
           <Route
             path="/watch-and-support"
             element={<WatchAndSupport />}
           />
-          <Route 
-          path="/contact" 
-          element={<Contact />} />
-          <Route 
-          path="/apothecary" 
-          element={<Apothecary />} />
 
+          <Route
+            path="/contact"
+            element={<Contact />}
+          />
+
+          <Route
+            path="/apothecary"
+            element={<Apothecary />}
+          />
+
+          <Route
+            path="*"
+            element={<NotFound />}
+          />
         </Routes>
 
         <Footer />
-        <MobileCTA/>
-        
+        <MobileCTA />
       </div>
-     
-    
     </BrowserRouter>
-   
   )
 }
 
