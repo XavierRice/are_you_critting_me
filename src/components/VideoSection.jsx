@@ -13,13 +13,11 @@ function VideoSection()
       </div>
 
       <div className="video-frame">
-        <iframe
-          src="https://www.youtube.com/embed/VKye0TUuVOU?si=RyQOSn5YiGCsPA0U"
-          title="Dancing Dragon Video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </div>
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/nRuEEylDOoE?si=zkheyJRk3Rpwael8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+        
+        
+        
+              </div>
     </section>
   )
 }
