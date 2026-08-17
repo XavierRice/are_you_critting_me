@@ -8,7 +8,7 @@ import WatchAndSupport from './pages/WatchAndSupport'
 import Contact from './pages/Contact'
 import Apothecary from './pages/Apothecary'
 import NotFound from './pages/NotFound'
-import NpcGeneratorPage from './pages/NpcGeneratorPage'
+import CalderonGeneratorPage from './pages/CalderonGeneratorPage'
 import NpcSuccess from './pages/NpcSuccess'
 
 function App() {
@@ -38,16 +38,17 @@ function App() {
             element={<Apothecary />}
           />
 
-         <Route 
-         path="/npc-generator" 
-         element={<NpcGeneratorPage />}
-         />
-        
-        <Route
-        path="/npc-generator/success"
-        element={<NpcSuccess />}
-        />
+       <Route
+         path="/calderon-generator"
+         element={<CalderonGeneratorPage />}
+       />
 
+       <Route
+         path="/npc-generator/success"
+         element={<NpcSuccess />}
+       />
+
+    
         <Route
             path="*"
             element={<NotFound />}

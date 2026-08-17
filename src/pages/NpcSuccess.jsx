@@ -18,7 +18,6 @@ function NpcSuccess() {
       className="npc-success-page"
     >
       <section className="npc-success-card">
-
         <div className="npc-success-icon">
           <ScrollText
             size={34}
@@ -49,20 +48,21 @@ function NpcSuccess() {
           Should fate—or the Dungeon
           Master—take an interest, they
           may someday find themselves
-          wandering into Cladron. Player enters at their own risk.
+          wandering into Calderon.
+          Participation in the Second Age
+          is, naturally, at their own risk.
         </p>
 
         <div className="npc-success-actions">
-
           <Link
             className="button primary"
-            to="/npc-generator"
+            to="/calderon-generator"
           >
             <Dices
               size={17}
               aria-hidden="true"
             />
-            Create Another Citizen
+            Return to the Generator
           </Link>
 
           <Link
@@ -75,9 +75,7 @@ function NpcSuccess() {
             />
             Return to Calderon
           </Link>
-
         </div>
-
       </section>
     </main>
   );

@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "refresh-npc-data": "node scripts/refreshNpcData.js"
+    "refresh-npc-data": "node scripts/refreshNpcData.js",
+    "refresh-item-data": "node scripts/refreshItemData.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.112.1",

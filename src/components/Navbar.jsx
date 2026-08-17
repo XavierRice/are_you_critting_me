@@ -95,7 +95,8 @@ function Navbar() {
           
           <Link
             className="nav-join-link"
-            to="/watch-and-support#updates"
+            //  to="/watch-and-support#updates"
+            to="/calderon-generator"
             onClick={closeMenu}
             >
 
