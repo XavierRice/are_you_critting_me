@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Dices,
   RefreshCw,
@@ -6,41 +7,87 @@ import {
 } from "lucide-react";
 
 import { generateNpc } from "../utils/generateNpc";
-import { validateNpcName } from "../utils/validateNpcName";
+import { validateNpcName } from "../../shared/validateNpcName";
 
 function NpcGenerator() {
+  const navigate = useNavigate();
+
   const [npc, setNpc] = useState(null);
   const [name, setName] = useState("");
   const [nameError, setNameError] = useState("");
+  const [submitError, setSubmitError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   function rollNpc() {
     setNpc(generateNpc());
     setName("");
+    setNameError("");
+    setSubmitError("");
   }
 
-function handleSubmit(event) {
-  event.preventDefault();
+  async function handleSubmit(event) {
+    event.preventDefault();
 
-  const cleanedName = name.trim();
+    const cleanedName = name.trim();
 
-  if (!npc || !cleanedName) {
-    return;
+    if (!npc || !cleanedName) {
+      return;
+    }
+
+    const validation = validateNpcName(cleanedName);
+
+    if (!validation.isValid) {
+      setNameError(validation.message);
+      return;
+    }
+
+    setNameError("");
+    setSubmitError("");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(
+        "/.netlify/functions/submit-npc",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: cleanedName,
+            species: npc.species,
+            calling: npc.calling,
+            callingType: npc.callingType,
+            background: npc.background,
+            quirk: npc.quirk,
+            company: "",
+          }),
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          result.error ||
+            "The census could not accept this citizen."
+        );
+      }
+
+      navigate("/npc-generator/success", {
+        state: {
+          npcName: cleanedName,
+        },
+      });
+    } catch (error) {
+      setSubmitError(
+        error.message ||
+          "Something went wrong. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   }
-
-  const validation = validateNpcName(cleanedName);
-
-  if (!validation.isValid) {
-    setNameError(validation.message);
-    return;
-  }
-
-  setNameError("");
-
-  console.log({
-    name: cleanedName,
-    ...npc,
-  });
-}
 
   return (
     <section
@@ -57,9 +104,9 @@ function handleSubmit(event) {
         </div>
 
         <p>
-          Fate will determine who they are.
-          You merely have the unfortunate responsibility
-          of naming them.
+          Fate will determine who they are. You merely
+          have the unfortunate responsibility of naming
+          them.
         </p>
       </div>
 
@@ -73,8 +120,8 @@ function handleSubmit(event) {
           <h2>Roll Your Fate</h2>
 
           <p>
-            Calderon requires citizens.
-            Qualifications are apparently optional.
+            Calderon requires citizens. Qualifications
+            are apparently optional.
           </p>
 
           <button
@@ -145,44 +192,63 @@ function handleSubmit(event) {
               Name this citizen
             </label>
 
-        <input
-             id="npc-name"
-             type="text"
-             value={name}
-             onChange={(event) => {
-              setName(event.target.value);
-               setNameError("");
-                 }}
-             maxLength={80}
-             placeholder="Dorbin Clasp"
-             aria-invalid={nameError ? "true" : "false"}
-             aria-describedby={nameError ? "npc-name-error" : undefined}
-             required
-        />
+            <input
+              id="npc-name"
+              type="text"
+              value={name}
+              onChange={(event) => {
+                setName(event.target.value);
+                setNameError("");
+                setSubmitError("");
+              }}
+              maxLength={80}
+              placeholder="Dorbin Clasp"
+              aria-invalid={
+                nameError ? "true" : "false"
+              }
+              aria-describedby={
+                nameError
+                  ? "npc-name-error"
+                  : undefined
+              }
+              required
+            />
 
             {nameError && (
-            <p
-            id="npc-name-error"
-            className="npc-name-error"
-            role="alert"
-             >
-             {nameError}
-            </p>
-             )}
-
+              <p
+                id="npc-name-error"
+                className="npc-name-error"
+                role="alert"
+              >
+                {nameError}
+              </p>
+            )}
 
             <button
               className="button primary"
               type="submit"
+              disabled={isSubmitting}
             >
-              Submit to Calderon
+              {isSubmitting
+                ? "Entering the Census…"
+                : "Submit to Calderon"}
             </button>
+
+            {submitError && (
+              <p
+                className="npc-submit-error"
+                role="alert"
+              >
+                {submitError}
+              </p>
+            )}
           </form>
 
           <button
             className="npc-reroll"
             type="button"
             onClick={rollNpc}
+            disabled={isSubmitting}
           >
             <RefreshCw
               size={16}

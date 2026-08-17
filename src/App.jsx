@@ -9,6 +9,7 @@ import Contact from './pages/Contact'
 import Apothecary from './pages/Apothecary'
 import NotFound from './pages/NotFound'
 import NpcGeneratorPage from './pages/NpcGeneratorPage'
+import NpcSuccess from './pages/NpcSuccess'
 
 function App() {
   return (
@@ -41,11 +42,16 @@ function App() {
          path="/npc-generator" 
          element={<NpcGeneratorPage />}
          />
+        
+        <Route
+        path="/npc-generator/success"
+        element={<NpcSuccess />}
+        />
 
-          <Route
+        <Route
             path="*"
             element={<NotFound />}
-          />
+        />
 
         </Routes>
 
