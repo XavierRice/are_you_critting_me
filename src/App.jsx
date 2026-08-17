@@ -8,6 +8,7 @@ import WatchAndSupport from './pages/WatchAndSupport'
 import Contact from './pages/Contact'
 import Apothecary from './pages/Apothecary'
 import NotFound from './pages/NotFound'
+import NpcGeneratorPage from './pages/NpcGeneratorPage'
 
 function App() {
   return (
@@ -36,10 +37,16 @@ function App() {
             element={<Apothecary />}
           />
 
+         <Route 
+         path="/npc-generator" 
+         element={<NpcGeneratorPage />}
+         />
+
           <Route
             path="*"
             element={<NotFound />}
           />
+
         </Routes>
 
         <Footer />

@@ -2333,3 +2333,296 @@ h2 {
     justify-content: center;
   }
 }
+
+.npc-name-error {
+  margin: 0.35rem 0 0;
+  color: #ffb3b3;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.npc-name-form input[aria-invalid="true"] {
+  border-color: #ff8f8f;
+}
+
+/* =========================
+   NPC GENERATOR
+   ========================= */
+
+.npc-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+
+.npc-generator .section-heading {
+  width: min(900px, 100%);
+  margin-bottom: 2.5rem;
+}
+
+
+/* =========================
+   NPC CARD
+   ========================= */
+
+.npc-card {
+  width: min(720px, 92%);
+  margin: 0 auto;
+  padding: clamp(1.75rem, 4vw, 3rem);
+
+  border: 1px solid rgba(244, 189, 88, 0.35);
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(110, 61, 132, 0.35),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      #2b1637,
+      #170d20 65%,
+      #100916
+    );
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+
+/* Small heading above the NPC name */
+
+.npc-card-label {
+  margin: 0 0 0.75rem;
+
+  color: var(--gold);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+
+/* NPC name */
+
+.npc-card h2 {
+  margin: 0 0 2rem;
+
+  color: #fff1b8;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.05;
+}
+
+
+/* =========================
+   SPECIES / CALLING /
+   BACKGROUND
+   ========================= */
+
+.npc-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+}
+
+
+/* Each individual stat */
+
+.npc-details > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+
+  min-height: 110px;
+  padding: 1rem 1.1rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.045);
+  text-align: center;
+
+}
+
+
+/* Species / Calling / Background labels */
+
+.npc-details span {
+  color: #d8a9ff;
+
+  font-size: 0.67rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+
+/* Actual generated result */
+
+.npc-details strong {
+  color: #fff4ce;
+
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+
+/* "Occupation" or "Adventuring Calling" */
+
+.npc-details small {
+  margin-top: 0.25rem;
+
+  color: #f4bd58;
+
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   QUIRK
+   ========================= */
+
+.npc-quirk {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  margin: 0 0 2rem;
+  padding: 1.25rem;
+
+  border-left: 3px solid var(--gold);
+  border-radius: 0 12px 12px 0;
+
+  background: rgba(244, 189, 88, 0.07);
+}
+
+.npc-quirk svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  color: var(--gold);
+}
+
+.npc-quirk span {
+  display: block;
+  margin-bottom: 0.45rem;
+
+  color: #d8a9ff;
+
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.npc-quirk p {
+  margin: 0;
+
+  color: #f2e8f6;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   NAME FORM
+   ========================= */
+
+.npc-name-form {
+  display: grid;
+  gap: 0.75rem;
+
+  margin-top: 2rem;
+  padding-top: 2rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.npc-name-form label {
+  color: #f4bd58;
+
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.npc-name-form input {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 0.95rem 1rem;
+
+  border: 1px solid rgba(220, 195, 255, 0.25);
+  border-radius: 12px;
+
+  color: white;
+  background: rgba(255, 255, 255, 0.06);
+
+  font: inherit;
+}
+
+.npc-name-form input:focus {
+  outline: 2px solid rgba(244, 189, 88, 0.8);
+  outline-offset: 2px;
+}
+
+
+/* =========================
+   REROLL
+   ========================= */
+
+.npc-reroll {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  margin-top: 1.5rem;
+  padding: 0;
+
+  border: 0;
+
+  color: #c9b7d1;
+  background: transparent;
+
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.npc-reroll:hover {
+  color: var(--gold);
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+  .npc-details {
+    grid-template-columns: 1fr;
+  }
+
+  .npc-details > div {
+    min-height: auto;
+  }
+
+  .npc-card {
+    width: 100%;
+  }
+}
