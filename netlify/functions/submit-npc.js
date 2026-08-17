@@ -1,5 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
-import { validateNpcName } from "../../shared/validateNpcName.js";
+import { validateNpcSubmission } from "../../shared/validateNpcSubmission.js";
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -108,23 +108,29 @@ export default async (request) => {
     }
 
     // Server-side NPC name moderation
-    const nameValidation =
-      validateNpcName(name);
+    const submissionValidation =
+  validateNpcSubmission({
+    name,
+    species,
+    calling,
+    callingType,
+    background,
+    quirk,
+  });
 
-    if (!nameValidation.isValid) {
-      return new Response(
-        JSON.stringify({
-          error:
-            "The Royal Census Office has rejected this name.",
-        }),
-        {
-          status: 400,
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+if (!submissionValidation.isValid) {
+  return new Response(
+    JSON.stringify({
+      error: submissionValidation.message,
+    }),
+    {
+      status: 400,
+      headers: {
+        "Content-Type": "application/json",
+      },
     }
+  );
+}
 
     const { data, error } = await supabase
       .from("npc_submissions")

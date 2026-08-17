@@ -11,7 +11,8 @@ const blockedWords = [
     "f@gg0t",
 "n1gger",
 "sh1t",
-"tranny"
+"tranny",
+"gay",
 ];
 
 function normalizeName(value) {
