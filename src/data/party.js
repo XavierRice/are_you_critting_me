@@ -11,8 +11,9 @@ import sarahPhoto from '../assets/party/Sarah_fake.png'
 import xavierPhoto from '../assets/party/Xavier_fake.png'
 import scottPhoto from '../assets/party/Scott_fake.png'
 
-
-
+import davidCast from '../assets/party/DavidHS.jpg'
+import scottCast from '../assets/party/ScottHS.jpg'
+import sarahCast from '../assets/party/SarahHS.jpg'
 
 
 
@@ -24,7 +25,7 @@ export const party = [
   detail: 
     'Scott our Game Master and DM bringing its heroes, villains, monsters and catastrophes to life while keeping the story moving and the consequences coming.',
   image: dmImage,
-  actorImage: scottPhoto,
+  actorImage: scottCast,
   },
 
   {
@@ -34,7 +35,7 @@ export const party = [
     detail:
       'An aarakocra sailor and former captain of The Salty Mermaid. Artie has crossed dangerous seas, studied the magical arts, and become moderately competent at both.',
       image: artieImage,
-      actorImage:davidPhoto,
+      actorImage:davidCast,
       },
   {
     actor: 'Katie Hartman',
@@ -52,7 +53,7 @@ export const party = [
     detail:
       'A powerful centaur cast out after learning that her mother traded Frigg’s fate for eternal beauty. She found a new family among a band of misfits for hire.',
     image:friggImage,
-    actorImage:sarahPhoto,
+    actorImage:sarahCast,
   },
   {
     actor: 'Xavier Rice',
