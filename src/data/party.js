@@ -14,7 +14,7 @@ import scottPhoto from '../assets/party/Scott_fake.png'
 import davidCast from '../assets/party/DavidHS.jpg'
 import scottCast from '../assets/party/ScottHS.jpg'
 import sarahCast from '../assets/party/SarahHS.jpg'
-
+import xavierCast from '../assets/party/XavierHS.jpg'
 
 
 export const party = [
@@ -62,6 +62,6 @@ export const party = [
     detail:
       'Gary version 6.9 was created for grieving nobles and programmed to “Protect and Obey.” Passed from ruler to ruler, his system now reboots and he his own master for the first time.',
     image:garyImage,
-    actorImage:xavierPhoto,
+    actorImage:xavierCast,
   },
 ]
