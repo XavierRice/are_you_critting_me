@@ -1,5 +1,5 @@
 import partyEmblem from '../assets/MainImage.png'
-import logo from '../assets/AYCM_LOGO.png'
+import logo from '../assets/AMYC_TRANS.png'
 
 function Hero() {
   return (
