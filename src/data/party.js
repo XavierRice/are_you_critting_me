@@ -1,15 +1,16 @@
-import artieImage from '../assets/party/Artie_falcon.png'
-import shrimpImage from '../assets/party/Shrimp_katie.png'
-import friggImage from '../assets/party/Frig_Sarah.png'
-import garyImage from '../assets/party/Gary_Xavier.png'
+
+
 import dmImage from '../assets/party/DM_Scoot.png'
 
+import artieImg from '../assets/party/ArtB.PNG'
+import friggImg from '../assets/party/FriggB.PNG'
+import garyImg from '../assets/party/Gary2.PNG'
+import shrimpImg from '../assets/party/ShrimpB.PNG'
 
-import davidPhoto from '../assets/party/David_fake.png'
 import katiePhoto from '../assets/party/Katie_fake.png'
-import sarahPhoto from '../assets/party/Sarah_fake.png'
-import xavierPhoto from '../assets/party/Xavier_fake.png'
-import scottPhoto from '../assets/party/Scott_fake.png'
+
+
+
 
 import davidCast from '../assets/party/DavidHS.jpg'
 import scottCast from '../assets/party/ScottHS.jpg'
@@ -34,7 +35,7 @@ export const party = [
     name: 'Art Deco Falcon',
     detail:
       'An aarakocra sailor and former captain of The Salty Mermaid. Artie has crossed dangerous seas, studied the magical arts, and become moderately competent at both.',
-      image: artieImage,
+      image: artieImg,
       actorImage:davidCast,
       },
   {
@@ -43,7 +44,7 @@ export const party = [
     name: 'Shrimp Reznoir',
     detail:
       'A banjoulele-playing halfling who left home after a family dispute and began busking across Calderon. Best known for the divisive hit “Clowns Gotta Clown.”',
-    image:shrimpImage,
+    image:shrimpImg,
     actorImage:katiePhoto,
   },
   {
@@ -52,7 +53,7 @@ export const party = [
     name: 'Frigg',
     detail:
       'A powerful centaur cast out after learning that her mother traded Frigg’s fate for eternal beauty. She found a new family among a band of misfits for hire.',
-    image:friggImage,
+    image:friggImg,
     actorImage:sarahCast,
   },
   {
@@ -61,7 +62,7 @@ export const party = [
     name: 'Gary OnyxElm',
     detail:
       'Gary version 6.9 was created for grieving nobles and programmed to “Protect and Obey.” Passed from ruler to ruler, his system now reboots and he his own master for the first time.',
-    image:garyImage,
+    image:garyImg,
     actorImage:xavierCast,
   },
 ]
