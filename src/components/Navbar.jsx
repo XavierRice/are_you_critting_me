@@ -75,7 +75,8 @@ function Navbar() {
             Party
           </a>
 
-          <Link
+         {
+         /*  <Link
             className="nav-feature-link"
             to="/watch-and-support"
             onClick={closeMenu}
@@ -83,6 +84,7 @@ function Navbar() {
             <Play size={15} aria-hidden="true" />
             Watch
           </Link>
+          */}
 
           <Link to="/apothecary">Apothecary</Link>
 
