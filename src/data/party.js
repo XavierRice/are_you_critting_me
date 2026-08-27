@@ -4,6 +4,7 @@ import artieImg from "../assets/party/ArtB.png";
 import friggImg from "../assets/party/FriggB.png";
 import garyImg from "../assets/party/Gary2.png";
 import shrimpImg from "../assets/party/ShrimpB.png";
+import dmImg from '../assets/party/DmB.png'
 
 import katiePhoto from "../assets/party/Katie_fake.png";
 
@@ -19,7 +20,7 @@ export const party = [
     name: "Dungeon Master",
     detail:
       "Scott our Game Master and DM bringing its heroes, villains, monsters and catastrophes to life while keeping the story moving and the consequences coming.",
-    image: dmImage,
+    image: dmImg,
     actorImage: scottCast,
   },
 
