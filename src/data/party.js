@@ -1,9 +1,9 @@
 import dmImage from "../assets/party/DM_Scoot.png";
 
-import artieImg from "../assets/party/ArtB.PNG";
-import friggImg from "../assets/party/FriggB.PNG";
-import garyImg from "../assets/party/Gary2.PNG";
-import shrimpImg from "../assets/party/ShrimpB.PNG";
+import artieImg from "../assets/party/ArtB.png";
+import friggImg from "../assets/party/FriggB.png";
+import garyImg from "../assets/party/Gary2.png";
+import shrimpImg from "../assets/party/ShrimpB.png";
 
 import katiePhoto from "../assets/party/Katie_fake.png";
 
